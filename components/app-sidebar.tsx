@@ -1,6 +1,4 @@
 import * as React from "react"
-import { Github, MessagesSquare } from "lucide-react"
-import Link from "next/link"
 import {
   Sidebar,
   SidebarContent,
@@ -19,7 +17,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild></SidebarMenuButton>
+            <SidebarMenuButton size="lg" asChild>
+              </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
@@ -32,7 +31,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
          
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild></SidebarMenuButton>
+            <SidebarMenuButton size="lg" asChild>
+            </SidebarMenuButton>
             
           </SidebarMenuItem>
         </SidebarMenu>
