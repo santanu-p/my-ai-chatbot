@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
-import { MoreHorizontal } from "lucide-react"
+import { ChevronRight, MoreHorizontal } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -31,6 +31,7 @@ function BreadcrumbItem({ className, ...props }: React.ComponentProps<"li">) {
   )
 }
 
+
 function BreadcrumbPage({ className, ...props }: React.ComponentProps<"span">) {
   return (
     <span
@@ -43,6 +44,8 @@ function BreadcrumbPage({ className, ...props }: React.ComponentProps<"span">) {
     />
   )
 }
+
+
 
 function BreadcrumbEllipsis({
   className,
@@ -66,8 +69,6 @@ export {
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbPage,
-  BreadcrumbSeparator,
   BreadcrumbEllipsis,
 }
