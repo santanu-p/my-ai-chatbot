@@ -25,7 +25,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     <MessagesSquare className="size-4" />
                   </div>
                   <div className="flex flex-col gap-0.5 leading-none">
-                    <span className="font-semibold">Nexis</span>
+                    <span className="font-semibold">Nexis Gold</span>
                   </div>
                 </Link>
               </SidebarMenuButton>
