@@ -27,7 +27,7 @@ export const Assistant = () => {
                 </BreadcrumbItem>
                 <BreadcrumbItem>
                   <BreadcrumbPage>
-                    Starter Template
+                    Powered by AI
                   </BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
