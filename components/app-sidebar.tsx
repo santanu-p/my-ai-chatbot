@@ -42,9 +42,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
          
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <Link href="https://santanu-p.github.io/personal-webpage/" target="_blank">
+              <Link href="https://santanu-p.github.io/personal-webpage/" target="_blank" rel="noopener noreferrer">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Github className="size-4" />
+                  <img src="https://raw.githubusercontent.com/santanu-p/personal-webpage/main/favicon_io/favicon.ico" alt="Santanu Pradhan website icon" className="size-4" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-semibold">Website</span>
