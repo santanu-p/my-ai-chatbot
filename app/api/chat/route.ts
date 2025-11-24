@@ -1,6 +1,8 @@
+// app/api/chat/route.ts
 import { createOpenAI } from "@ai-sdk/openai";
 import { streamText } from "ai";
 
+export const runtime = "edge";      // optional but recommended for streaming
 export const maxDuration = 30;
 
 const groq = createOpenAI({
@@ -9,16 +11,21 @@ const groq = createOpenAI({
 });
 
 export async function POST(req: Request) {
+  if (!process.env.GROQ_API_KEY) {
+    return new Response("Missing GROQ_API_KEY", { status: 500 });
+  }
+
   const { messages } = await req.json();
-  const result = streamText({
-    model: groq("openai/gpt-oss-120b"),
+
+  const result = await streamText({
+    // Pick any Groq model you have access to, e.g.:
+    // 'llama-3.1-70b-versatile', 'llama-3.1-8b-instant', 'mixtral-8x7b-32768', etc.
+    model: groq("llama-3.1-70b-versatile"),
+    messages,           // should be an AI SDK Message[] from the client
     temperature: 1,
-    max_completion_tokens: 8192,
-    top_p: 1,
-    stream: true,
-    reasoning_effort: "medium",
-    stop: null,
-    messages,
+    topP: 1,
+    maxTokens: 8192,
   });
+
   return result.toDataStreamResponse();
 }
