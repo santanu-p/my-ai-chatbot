@@ -20,7 +20,7 @@ export async function POST(req: Request) {
   const result = await streamText({
     // Pick any Groq model you have access to, e.g.:
     // 'llama-3.1-70b-versatile', 'llama-3.1-8b-instant', 'mixtral-8x7b-32768', etc.
-    model: groq("llama-3.1-70b-versatile"),
+    model: groq("openai/gpt-oss-120b"),
     messages,           // should be an AI SDK Message[] from the client
     temperature: 1,
     topP: 1,
