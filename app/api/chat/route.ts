@@ -11,7 +11,7 @@ const groq = createOpenAI({
 export async function POST(req: Request) {
   const { messages } = await req.json();
   const result = streamText({
-    model: groq("llama3-70b-8192"),
+    model: groq("openai/gpt-oss-120b"),
     messages,
   });
   return result.toDataStreamResponse();
